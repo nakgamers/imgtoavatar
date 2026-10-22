@@ -10,8 +10,9 @@ track. No 3D model, no frame-by-frame drawing.
 |---|---|
 | <img src="examples/rayneshia/source.png" width="420" alt="Rayneshia, original still illustration"> | <img src="examples/rayneshia/preview.gif" width="420" alt="Rayneshia rigged avatar, idle loop"> |
 
-*Rayneshia, the example in this repo: one illustration in, a living avatar
-out — an idle-animation loop that now runs as a live lockscreen.*
+*Rayneshia, the example in this repo: a full scene illustration, split
+into layers — background, ring, character, fire — each rigged with its
+own motion and composited back into one living image.*
 
 ## How it works
 
@@ -20,8 +21,10 @@ The rigging is prepared by a coding agent following the skill in
 [mesh-avatar-studio](https://github.com/shinshin86/mesh-avatar-studio)
 engine:
 
-1. The agent drafts a mesh rig over the illustration (eyes, mouth, hair
-   strands, body) and validates it.
+1. If the illustration is a full scene, the agent first splits it into
+   layers (clean background plate, character, foreground effects). Then
+   it drafts a mesh rig over the character (eyes, mouth, hair strands,
+   body) and validates it.
 2. Layers are built and a pose contact sheet is rendered — blink, mouth,
    head turns, hair sway — and visually reviewed.
 3. You fine-tune proportions in the studio's local editor if you like.
@@ -33,7 +36,7 @@ engine:
 | Path | What it is |
 |---|---|
 | `skill/SKILL.md` | The agent skill: workflow, quality gates, and hard lessons for rigging an illustration end to end |
-| `examples/rayneshia/` | A complete worked example — source illustration, final rig, and the rendered live-lockscreen loop |
+| `examples/rayneshia/` | A complete worked example — source illustration, the layer split, the final rig, and the rendered loop |
 
 ## Quick start
 

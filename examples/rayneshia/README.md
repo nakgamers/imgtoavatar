@@ -1,20 +1,48 @@
-# Example: Rayneshia
+# Example: Rayneshia — the layered build
 
-A complete worked example of the imgtoavatar workflow.
+A complete worked example of the imgtoavatar workflow, using the harder
+path: **a full scene illustration**, split into layers and rigged per
+layer.
 
 **Input:** one illustration — Rayneshia, an original character from the
 music video *King Of Curse* (ash-blonde bob, red eyes, glasses, navy jacket
-with a red-lined hood, ring of fire).
+with a red-lined hood), painted *into* her scene: a golden ring behind
+her, flames in front of and behind the body.
 
 The starting point — the still illustration, exactly as drawn:
 
 ![Rayneshia, original still illustration](source.png)
 
-**Output:** a mesh-rigged avatar running a seamless idle loop as a live
-lockscreen — blinking, breathing, hair swaying, procedural embers drifting
-at the edges of the frame.
+**Output:** the same image, alive — blinking, breathing, hair swaying,
+flames breathing with her — rendered as a seamless 8-second loop.
 
-![Rayneshia rigged — idle loop preview](preview.gif)
+![Rayneshia rigged — layered loop preview](preview.gif)
+
+## Why layers?
+
+mesh-avatar-studio rigs a background-less character directly. This
+illustration has a background, so it was decomposed first:
+
+- **Fine split (11 working layers, back → front):** background → ring →
+  flames-back → hair-back → body → face → hair-front → eyes → glasses →
+  mouth → flames-front. The background is a clean plate — the character
+  inpainted out — so nothing tears when the upper layers move.
+- **Grouped into 4 plates for the final composite:**
+
+| Background (clean plate) | Ring |
+|---|---|
+| <img src="layers/background.jpg" width="380" alt="Background plate"> | <img src="layers/ring.jpg" width="380" alt="Ring layer"> |
+| **Character** | **Fire (front + back flames)** |
+| <img src="layers/karakter.jpg" width="380" alt="Character layer"> | <img src="layers/api.jpg" width="380" alt="Fire layer"> |
+
+- **Verified before animating:** re-stacking the plates reproduces the
+  original with a diff of ≈ 0.2/255.
+- **Rigged per layer, then composited:** the character carries the mesh
+  animation (blink, breath, hair sway — strand `max` raised on the side
+  strands and bangs); the ring and flames get their own subtle motion;
+  procedural embers drift on top, kept off the face.
+
+A 16:9 render of the same avatar also runs as a live lockscreen.
 
 ## Files
 
@@ -23,19 +51,9 @@ at the edges of the frame.
 | `source.png` | The original illustration (the only input) |
 | `rig.json` | The finished mesh rig produced from the validated draft |
 | `avatar.json` | Avatar descriptor used by the studio runtime |
-| `rayneshia-live-lockscreen.mp4` | The rendered idle loop (live lockscreen) |
+| `rayneshia-layered-loop.mp4` | The rendered layered loop (1824×1376, 8 s) |
 | `preview.gif` | Short preview of the loop |
-
-## Notes from the build
-
-- Eye regions were kept deliberately tight — the single biggest factor in
-  a clean blink.
-- Hair movement comes from strand physics: side strands and bangs got a
-  larger `max` (tip reach), which is what makes the sway visible.
-- Ember particles are procedural and were kept off the face.
-- The loop seam was checked frame-to-frame; the lockscreen prompt of the
-  desktop sits at a fixed center position, so the composition keeps the
-  face clear of it.
+| `layers/` | The 4 composite plates (background / ring / character / fire), flattened for viewing |
 
 ## Terms
 
