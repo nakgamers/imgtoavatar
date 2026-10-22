@@ -6,11 +6,15 @@ A complete worked example of the imgtoavatar workflow.
 music video *King Of Curse* (ash-blonde bob, red eyes, glasses, navy jacket
 with a red-lined hood, ring of fire).
 
+The starting point — the still illustration, exactly as drawn:
+
+![Rayneshia, original still illustration](source.png)
+
 **Output:** a mesh-rigged avatar running a seamless idle loop as a live
 lockscreen — blinking, breathing, hair swaying, procedural embers drifting
 at the edges of the frame.
 
-![Preview](preview.gif)
+![Rayneshia rigged — idle loop preview](preview.gif)
 
 ## Files
 

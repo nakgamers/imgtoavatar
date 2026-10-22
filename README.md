@@ -6,10 +6,12 @@ One still image goes in — a mesh-rigged avatar comes out: it blinks,
 breathes, turns its head, sways its hair, and can talk along to a voice
 track. No 3D model, no frame-by-frame drawing.
 
-![Rayneshia — from illustration to live lockscreen](examples/rayneshia/preview.gif)
+| Before — the still illustration | After — rigged and alive |
+|---|---|
+| <img src="examples/rayneshia/source.png" width="420" alt="Rayneshia, original still illustration"> | <img src="examples/rayneshia/preview.gif" width="420" alt="Rayneshia rigged avatar, idle loop"> |
 
-*Rayneshia, the example in this repo: a single illustration rigged into an
-idle-animation loop that now runs as a live lockscreen.*
+*Rayneshia, the example in this repo: one illustration in, a living avatar
+out — an idle-animation loop that now runs as a live lockscreen.*
 
 ## How it works
 
