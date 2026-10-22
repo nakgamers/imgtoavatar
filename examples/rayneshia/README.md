@@ -11,12 +11,12 @@ her, flames in front of and behind the body.
 
 The starting point — the still illustration, exactly as drawn:
 
-![Rayneshia, original still illustration](source.png)
+<img src="source.png" width="640" alt="Rayneshia, original still illustration">
 
 **Output:** the same image, alive — blinking, breathing, hair swaying,
 flames breathing with her — rendered as a seamless 8-second loop.
 
-![Rayneshia rigged — layered loop preview](preview.gif)
+<img src="preview.gif" width="640" alt="Rayneshia rigged — layered loop preview">
 
 ## Why layers?
 
@@ -32,19 +32,19 @@ illustration has a background, so it was decomposed first:
 
 **1. Background — the clean plate**
 
-![Background plate](layers/background.jpg)
+<img src="layers/background.jpg" width="640" alt="Background plate">
 
 **2. Ring**
 
-![Ring layer](layers/ring.jpg)
+<img src="layers/ring.jpg" width="640" alt="Ring layer">
 
 **3. Character**
 
-![Character layer](layers/karakter.jpg)
+<img src="layers/karakter.jpg" width="640" alt="Character layer">
 
 **4. Fire — front + back flames**
 
-![Fire layer](layers/api.jpg)
+<img src="layers/api.jpg" width="640" alt="Fire layer">
 
 - **Verified before animating:** re-stacking the plates reproduces the
   original with a diff of ≈ 0.2/255.

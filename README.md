@@ -8,11 +8,11 @@ track. No 3D model, no frame-by-frame drawing.
 
 **Before — the still illustration**
 
-![Rayneshia, original still illustration](examples/rayneshia/source.png)
+<img src="examples/rayneshia/source.png" width="640" alt="Rayneshia, original still illustration">
 
 **After — rigged and alive**
 
-![Rayneshia rigged avatar, idle loop](examples/rayneshia/preview.gif)
+<img src="examples/rayneshia/preview.gif" width="640" alt="Rayneshia rigged avatar, idle loop">
 
 *Rayneshia, the example in this repo: a full scene illustration, split
 into layers — background, ring, character, fire — each rigged with its
