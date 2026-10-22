@@ -6,9 +6,13 @@ One still image goes in — a mesh-rigged avatar comes out: it blinks,
 breathes, turns its head, sways its hair, and can talk along to a voice
 track. No 3D model, no frame-by-frame drawing.
 
-| Before — the still illustration | After — rigged and alive |
-|---|---|
-| <img src="examples/rayneshia/source.png" width="420" alt="Rayneshia, original still illustration"> | <img src="examples/rayneshia/preview.gif" width="420" alt="Rayneshia rigged avatar, idle loop"> |
+**Before — the still illustration**
+
+![Rayneshia, original still illustration](examples/rayneshia/source.png)
+
+**After — rigged and alive**
+
+![Rayneshia rigged avatar, idle loop](examples/rayneshia/preview.gif)
 
 *Rayneshia, the example in this repo: a full scene illustration, split
 into layers — background, ring, character, fire — each rigged with its

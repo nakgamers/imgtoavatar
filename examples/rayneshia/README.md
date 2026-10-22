@@ -27,13 +27,24 @@ illustration has a background, so it was decomposed first:
   flames-back → hair-back → body → face → hair-front → eyes → glasses →
   mouth → flames-front. The background is a clean plate — the character
   inpainted out — so nothing tears when the upper layers move.
-- **Grouped into 4 plates for the final composite:**
+- **Grouped into 4 plates for the final composite** (stack order,
+  back → front):
 
-| Background (clean plate) | Ring |
-|---|---|
-| <img src="layers/background.jpg" width="380" alt="Background plate"> | <img src="layers/ring.jpg" width="380" alt="Ring layer"> |
-| **Character** | **Fire (front + back flames)** |
-| <img src="layers/karakter.jpg" width="380" alt="Character layer"> | <img src="layers/api.jpg" width="380" alt="Fire layer"> |
+**1. Background — the clean plate**
+
+![Background plate](layers/background.jpg)
+
+**2. Ring**
+
+![Ring layer](layers/ring.jpg)
+
+**3. Character**
+
+![Character layer](layers/karakter.jpg)
+
+**4. Fire — front + back flames**
+
+![Fire layer](layers/api.jpg)
 
 - **Verified before animating:** re-stacking the plates reproduces the
   original with a diff of ≈ 0.2/255.
